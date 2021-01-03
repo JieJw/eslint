@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    [
+      // 去除编译时产生的重复函数
+      "@babel/plugin-transform-runtime",
+      // 编译后的代码去除console
+      // "transform-remove-console",
+      {
+        "corejs": 2
+      }
+    ]
+  ],
+  // 为babel安装指定的插件， 插件命采用babel-preset-xxx的形式
+  // xxx时npm安装时的插件名
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "corejs": 2
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react",
+    "@babel/preset-flow"
+  ]
+}
